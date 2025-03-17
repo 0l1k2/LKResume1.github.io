@@ -1,62 +1,40 @@
-# 个人简历
+# 梁可
 
-本项目为个人简历 Latex 源码存放，同时包含效果图呈现，简历入口为 resume-zh_CN.tex， 修改自项目 [resume](https://github.com/billryan/resume/)，若不想本地手动编译可以将该源码打包至 zip 直接上传至 ShareLatex 进行在线编译与预览。
+## 联系信息
+- **电话**: 133 6760 6637
+- **邮箱**: studylinux781@gmail.com, 2504095682@qq.com
+- **职位**: IT小白
+- **GitHub**: [@0l1k2](https://github.com/0l1k2)
 
-## 项目说明
+## 个人总结
+我是一名充满干劲的软件学习者，主攻全栈开发，擅长用 Spring Boot 开发和搞点前端。GitHub 上有 csapp 实验和计算机网络实验项目。最近正在研究分布式系统。习惯专注攻坚，遇到难题能熬夜死磕代码。笃信 "Talk is cheap" 的工程师哲学，享受用代码解决问题的过程。
 
-一个优雅的 \LaTeX\ 简历模板, 使用 \XeLaTeX\ 编译, 因为受不了古老的`res`和不太适合作为一页纸简历的`moderncv`, 遂自己动手写了这个模板， 受以下项目启发：
+## 教育背景
+### 重庆邮电大学，软件工程 (本科)  
+**2022.9 -- 2026.6**  
+主修课程：数据结构与算法、操作系统、计算机网络、数据库原理、编程语言原理、大数据分析与处理。
 
-- [zachscrivena/simple-resume-cv](https://github.com/zachscrivena/simple-resume-cv)
-- [res](https://www.ctan.org/pkg/res)
-- [JianXu's CV](http://www.jianxu.net/en/files/JianXu_CV.pdf)
-- [paciorek's CV/Resume template](http://www.stat.berkeley.edu/~paciorek/computingTips/Latex_template_creating_CV_.html)
-- [How to write a LaTeX class file and design your own CV (Part 1) - ShareLaTeX](https://www.sharelatex.com/blog/2011/03/27/how-to-write-a-latex-class-file-and-design-your-own-cv.html)
+**校园经历**:
+- 参加学校娱乐性挑战杯——团队协作中获得第一名；在摆摊过程中以最少投入获得最高收益。
+- 互联网+ 比赛 (2023--2024)——以振兴老街为目标，规划项目，走访周边商铺，了解资金情况、评估潜在开发并提出具体方案。
 
-## 特性
+## 项目经历
 
-- 极其容易定制和扩展 (`res`模板中枪倒地...)
-- 完善的 Unicode 字体支持, 因为用的是 \XeLaTeX\ 嘛
-- 完美的中文支持，使用 Adobefonts
-- 支持 FontAwesome 4.3.0 (目前还不支持使用别名)
+### Java 单机拼图游戏开发  
+**2024.7 -- 至今**  
+- **技术栈**: Java Swing, 多线程, MVC
+- **核心实现**: 动态布局与拖拽交互确保游戏可解（利用逆序数校验）；计时器与步数统计，支持本地成绩存档。
 
-### 效果输出
+### 后台秒杀系统  
+**2024.7 -- 至今**  
+- **技术栈**: SpringBoot, MySQL, Redis, Vue
+- **核心实现**: 高并发优化（利用 Redis 预减库存）；登录验证，用户信息存储于 MySQL；管理员可对秒杀商品进行增删改查；利用 jmeter 进行性能测试，确保系统稳定。
 
-![resume-zh_CN.png](./resume-zh_CN.png)
+### 个人简历网页  
+- 基于 Hugo 修改的 HTML 文件
+- 访问链接：[https://qithub.com/0l1k2/lkintro.qithub.io](https://qithub.com/0l1k2/lkintro.qithub.io)
 
-## 使用方法
-
-1. ShareLaTeX 在线编译
-2. 使用较新的 \LaTeX\ 发行版在本地计算机编译
-
-如果确定只需要中文简历的话单独克隆 `zh_CN` 分支即可, 需要注意的是该分支包含 Adobe 的宋楷黑仿四套中文字体，体积较大，如果本地安装有Adobe这四套字体的使用 master 英文模板即可。
-
-```
-git clone https://github.com/hijiangtao/resume.git --branch master --depth 1 --single-branch <folder>
-```
-
-如果系统已确定安装有 Adobe 的四套中文字型，在文档的开始处使用包`zh_CN-Adobefonts_internal`, 如果没有安装则使用包`zh_CN-Adobefonts_external`, 在 ShareLaTeX 上编译需要使用包`zh_CN-Adobefonts_external`.
-
-其他具体使用可参考给出的范例，都是极其简单易懂的宏，建议先看看 [How to write a LaTeX class file and design your own CV (Part 1) - ShareLaTeX](https://www.sharelatex.com/blog/2011/03/27/how-to-write-a-latex-class-file-and-design-your-own-cv.html) 和 [How to write a LaTeX class file and design your own CV (Part 2) - ShareLaTeX](https://www.sharelatex.com/blog/2013/06/28/how-to-write-a-latex-class-file-and-design-your-own-cv.html) 了解下该模板的简单背景，下面就一些新定义的宏做简要介绍。
-
-### 宏
-
-- `\name`: 姓名
-- `\contactInfo`: 联系信息, 需要三项信息，分别是{邮箱}{手机号}{个人主页}
-- `\basicContactInfo`: 简要的联系信息, 需要 项信息, 分别是{邮箱}{手机号}, 没有个人主页的用这个
-- `\section`: 用于分节, 如教育背景, 实习/项目经历等
-- `\subsection`: 用于小节标题, 无日期选项
-- `\datedsubsection`: 用于小节标题, 简历中使用最广，第二项为时间区间，自动右对齐
-- `\itemize`: 清单列表，简历中应用最广
-- `\enumerate`: 枚举列表，数字标号
-
-### FontAwesome
-
-首先在 [Font Awesome Icons](http://fortawesome.github.io/Font-Awesome/icons/) 上选中自己想使用的图标(暂不支持 alias)，然后在 [fontawesome.sty](https://github.com/billryan/resume/blob/zh_CN/fontawesome.sty) 中找到相应的宏, 将其作为普通文本一样使用。
-
-其他的可以自行参考相应 cls 和 tex 文件。
-
-## License
-
-[The MIT License (MIT)](http://opensource.org/licenses/MIT)
-
-Copyrighted fonts are not subjected to this License.
+## IT 技能
+- 掌握 C++、后端开发流程、HTML 等开发技术，了解前端开发工具与流程。
+- 熟练使用 VS Code、IDEA 等开发工具，了解 Git 等版本控制工具。
+- 英语四级已过。
